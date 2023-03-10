@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:tcp://localhost/~/test
     hikari:
-      username: "{cipher}5ab7fb5c77208086fe3c06ed3a1e5176a61bc79dd255af2bc00c57e7c7146cdc_aaaa"
+      username: "{cipher}5ab7fb5c77208086fe3c06ed3a1e5176a61bc79dd255af2bc00c57e7c7146cdc"
       password:
 
 token:
