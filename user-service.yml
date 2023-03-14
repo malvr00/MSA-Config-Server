@@ -14,4 +14,4 @@ gateway:
   ip: 192.168.0.25
 
 order_service:
-  url: http://127.0.01:8000/order-service/%s/orders
+  url: http://127.0.0.1:8000/order-service/%s/orders
