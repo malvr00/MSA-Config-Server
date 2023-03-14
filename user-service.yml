@@ -17,4 +17,4 @@ order_service:
   url: http://127.0.0.1:8000/order-service/%s/orders
   lb_url: http://ORDER-SERVICE/order-service/%s/orders
   exception:
-    order_is_empty: User orders is empty.
+    order_is_empty: There is no Item
