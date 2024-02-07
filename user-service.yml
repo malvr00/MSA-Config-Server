@@ -7,7 +7,7 @@ spring:
       password:
 
 token:
-  expiration_time: 864000000
+  expiration_time: 864000
   secret: "{cipher}AQAgK+3xVQUjDGVzevbMIJM6xLgG3an1fClc6JJVtNEPgP8CkQ4nPtr/jT3IaeCybNFQnl5uWTXMbHvLxPVBLbeAjT+5ZN7m9qR9kWmWAm2j9X1JrtouiXbEhjvs97WAs0rpdF8KQ3brEp26iB9kjzTvTAo0DOfXuDcy/K0YgIlnWRr8/GnVMLNhV+0/NlPWWIB0uKBpwplFEcyGu6zw+ulsUl5KU3DDqbtK9WnA+fNB1iqn8IF4koBKE+wb17fmUiEgrL/7KuuvaZ5PkmtWRekSN/wYNcRBZEKRD3GLmHjOsLGmT+U7IqQNpQoeBL8QGcC9+gFx2xjnNt283hk5/gDktY3yUaQNSmOTjQyod6fnySNLlUzqXNGa/dLMG+v4Ec3Bczkyfg17kMhxgd6JFMop6xo9glCNAVd1yGP31rLWeku9vb2MFZl7CQ+J1b6AGwYiAid5xlrAOaa1V9QuzZwPq6i4U+Z7Hlfsxql/vvqTuU1GfTpqBguiHHinw/wsE6mZVkH4zr9P2rg6XRtJ6qL2N/ZcOPKVb8AUotKnRKVpxQ=="
 
 gateway:
