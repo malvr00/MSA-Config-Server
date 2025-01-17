@@ -1,5 +1,9 @@
 # MSA-Config-Server
-- 사용이유
+- 사용 기술
+  - RabbitMQ
+  - Spring boot bus (amqp)
+  - Srping boot actuator
+- 사용 이유
   - Microservices Architecture(MSA)에서 각 서비스가 개별적인 설정 파일을 관리하면 일관성 유지가 어렵고, 설정 변경 시 서비스마다 수동 업데이트가 필요합니다.
   - 이를 해결하기 위해 Spring Cloud Config Server를 두어 설정을 중앙 집중식으로 관리하면, 아래와 같은 문제를 해결할 수 있습니다.
     - 모든 서비스가 동일한 성정을 공유할 수 있음.
