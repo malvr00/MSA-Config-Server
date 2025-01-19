@@ -22,3 +22,18 @@ Spring Cloud Bus를 이용해 설정 변경 사항을 각 서비스에 알리려
     - 서비스들이 설정 변경 이벤트를 비동기적으로 수신하므로, 서버를 재시작하지 않고도 설정을 반영할 수 있습니다.
   - 빠른 메세지 전송 속도 및 안정성
     - Config Server에서 설정 변경 이벤트를 발생시키면 RabbitMQ가 빠르게 메시지를 전달하여 다른 서비스들이 즉시 감지하고 업데이트 가능합니다.
+
+## application.yml 업데이트 과정
+1. Config Server의 설정 변경
+  - `application.yml` 또는 `application-{profile}.yml` 파일을 변경한 후 `Git` 저장소에 커밋합니다.
+2. Config Server에서 `/actuator/busrefresh` 요청 실행
+  - 특정 서비스나 모든 서비스에 변경 사항을 적용하기 위해 다음과 같이 HTTP 요청을 보냄:
+  ```
+  curl -X POST http://localhost:8888/actuator/busrefresh
+  ```
+  - 이때, spring-cloud-starter-bus-amqp와 RabbitMQ를 통해 설정 변경 이벤트를 브로드캐스트합니다.
+3. 각 서비스가 변경 사항을 감지하고 업데이트
+  - 각 마이크로서비스는 Spring Cloud Bus를 통해 Config Server로부터 변경 이벤트를 수신하고, `@RefreshScope가` 적용된 빈(Bean)이 자동으로 새로운 설정을 반영함.
+4. 서비스 재시작 없이 새로운 설정 적용
+  - 서버를 재시작하지 않고도 새로운 설정 값이 반영됩니다.
+  - 예를 들어, DB 연결 정보가 변경되었다면 기존 연결을 유지하다가 새로운 연결이 자동으로 적용됩니다.
