@@ -1,4 +1,6 @@
 # MSA-Config-Server
+
+### 정리
 - 사용 기술
   - RabbitMQ
   - Spring boot bus (amqp)
